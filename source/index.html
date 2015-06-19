@@ -13,10 +13,17 @@
 
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
-
+    
+    <!-- build:css ../build/css/lib.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css ../static/build/css/app.css -->
+    <!-- inject:css -->
     <link rel="stylesheet" href="css/maximage.css" type="text/css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8" />
-
+    <!-- endinject -->
+    <!-- endbuild -->
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
     <!--[if IE 6]>
@@ -122,13 +129,22 @@
         </div>
     </div>
 
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js'></script>
-    <script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- build:js ../build/js/lib.js -->
+    <!-- bower:js -->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/jquery.easing/js/jquery.easing.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js ../build/js/app.js -->
+    <!-- inject:js -->
     <script src="js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.maximage.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.fullscreen.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.ba-hashchange.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
 
     <script type="text/javascript" charset="utf-8">
         $(function () {
