@@ -1,0 +1,21 @@
+{
+  "name": "PinoleroMedia-ComingSoon",
+  "version": "0.5.0",
+  "homepage": "https://github.com/PinoleroMedia/coming-soon-website",
+  "authors": [
+    "LRPalacios <luisz54@hotmail.com>"
+  ],
+  "description": "Our coming soon web site!",
+  "keywords": [
+    "PinoleroMedia"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ]
+}
