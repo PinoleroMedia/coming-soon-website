@@ -6,7 +6,7 @@ module.exports = function () {
     var config = {
 
         indexHtml: indexHtml,
-        
+
         sourceDirectory: sourceDirectory,
 
         /* The base template here anything you install with bower will be injected
@@ -21,7 +21,7 @@ module.exports = function () {
             sourceDirectory + 'js/**/*.js',
         ],
 
-       
+
 
         /* Include or exlude here all the css that you want to be 
         * compressed and injected into you base.html
@@ -33,7 +33,7 @@ module.exports = function () {
         /* Include or exlude here the fonts that you need 
         *  copied to your build directory eg: font awesome
         */
-      
+
 
         /* This is where your compressed files will be 
          *  created, some people prefer to call this 'dist'
@@ -55,22 +55,28 @@ module.exports = function () {
             json: require('./bower.json'),
             directory: sourceDirectory + 'lib/',
             //ignorePath: '../static/',
-           
+
             //exclude: [ ],
         },
         /* 
         * These are the settings for you inject css
         */
         injectCssOptions: {
-            //ignorePath: '/static/',
+            ignorePath: '/source/',
+            transform: function (filepath) {
+                return '<link rel="stylesheet" href="' + filepath.replace('/', '') + '">';
+            }
         },
 
         /* 
        * These are the settings for you inject css
        */
         injectJsOptions: {
-            //ignorePath: '/static/',
-        }
+            ignorePath: '/source/',
+            transform: function (filepath) {
+                return '<script type="text/javascript" src="' + filepath.replace('/', '') + '"></script>';
+            }
+        },
     };
 
     config.getWiredepDefaulOptions = function () {

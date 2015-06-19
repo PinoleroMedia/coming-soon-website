@@ -42,7 +42,7 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest(config.sourceDirectory));
 });
 
-gulp.task('inject', ['styles'], function () {
+gulp.task('inject', function () {
     log('wire up the app css and js into the html');
     var injectCssOptions = config.getInjectDefaultCssOptions();
     var injectJsOptions = config.getInjectDefaultJsOptions();
@@ -58,11 +58,11 @@ gulp.task('inject', ['styles'], function () {
 gulp.task('optimize', ['wiredep', 'inject', 'images'], function () {
     log('Optimazing the assets');
     var assets = $.useref.assets();
-    var cssFilter = $.filter(config.css);
-    var jsFilter = $.filter(config.js);
+    var cssFilter = $.filter('**/*.css');
+    var jsFilter = $.filter('**/*.js');
 
     return gulp
-        .src(config.base)
+        .src(config.index)
         .pipe($.plumber())
         .pipe(assets)
         .pipe(cssFilter)
