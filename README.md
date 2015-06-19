@@ -1,2 +1,2 @@
 # coming-soon-website
-Our coming soon website repository
+This is the repor for our coming soon website
