@@ -28,3 +28,7 @@ node_modules
 
 #Bower components
 source/lib
+
+# system files
+*.db
+.DS_Store
